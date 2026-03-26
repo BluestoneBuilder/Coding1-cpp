@@ -1,8 +1,9 @@
 //George Smith Coding 1 Spring 2026
 //Our first c++ program
-//compile in terminal with "g++ main.cpp -o main"
-//then run with "./main"
+//Open terminal
 //use "cp 'FolderName'"" to navigate to the path of the c++ file
+//compile with "g++ main.cpp -o main"
+//then run with "./main"
 
 #include <iostream>     //in-out stream for sending text to the console
 #include <string>       //for player name
