@@ -10,7 +10,7 @@
 
 using namespace std;    
 
-//So we dont have to type "std::"" all the time
+//So we dont have to type "std::" all the time
 //this is where our program starts running code
 int main() 
 {
@@ -23,6 +23,21 @@ int main()
     cin >> playerName;
 
     cout << "Hello " << playerName << "." << endl;
+    cout << "Do you like video games? ";
+    string playerAnswer;
+    cin >> playerAnswer;
+    if(playerAnswer == "Yes")
+    {
+        cout << "Me too! Sick, " << playerName <<"!" << endl;
+    }
+    else if(playerAnswer == "No")
+    {
+        cout << "That's a shame. Goodbye, " << playerName << "." << endl;
+    }
+    else
+    {
+        cout << "It was a yes or no question, " << playerName << "." << endl;
+    }
 
     //cout << "Hello World!" << endl;     //cout for console out
                                         //endl for end line
