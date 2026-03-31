@@ -50,34 +50,7 @@ int main()
     }
     else
     {
-        cout << "It was a yes or no question, " << playerName << ". Why don't you try again. You like games?" << endl;
-        cin >> playerAnswer;
-        if(playerAnswer == "Yes" || playerAnswer == "yes")
-        {
-            cout << "Me too! Sick, " << playerName <<"! Let's play a game." << endl;
-            cout << "You find yourself wandering through the woods. It's dark and dreary. The trees seem to close in around you on all sides. Just then, you hear a twig snap not far behind you. You look and see two glowing eyes. What do you do? (Run / Pet) ";
-            cin >> playerAnswer;
-            if(playerAnswer == "Run" || playerAnswer == "run")
-            {
-                cout << "You try to run, but it seems to gain on you no matter how fast your legs move. You are tackled to the ground and devoured, never to be seen again." << endl;
-            }
-            else if(playerAnswer == "Pet" || playerAnswer == "pet")
-            {
-                cout << "You reach your hand out slowly. It turns out to be a dog. You pet it and decide to name it Beans. You live happily ever after with your new dog. Good job, " << playerName << "!" << endl;
-            }
-            else
-            {
-                cout << "That was not one of the options I gave you. It bites your face off and you die." << endl;
-            }
-        }
-        else if(playerAnswer == "No" || playerAnswer == "no")
-        {
-         cout << "That's a shame. I had this whole game planned out and everything, but it's whatever I guess. Goodbye, " << playerName << "." << endl;
-        }
-        else
-        {
-            cout << "Well, now I'm convinced you're just stupid, " << playerName << "." << endl;
-        }
+        cout << "It was a yes or no question, " << playerName << ". Not the brightest, are you?" << endl;
     }
 
     //cout << "Hello World!" << endl;     //cout for console out
