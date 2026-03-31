@@ -1,7 +1,7 @@
 //George Smith Coding 1 Spring 2026
 //Our first c++ program
 //Open terminal
-//use "cp 'FolderName'"" to navigate to the path of the c++ file
+//use "cp 'FolderName'" to navigate to the path of the c++ file
 //compile with "g++ main.cpp -o main"
 //then run with "./main"
 
