@@ -30,6 +30,7 @@ int main() {
         if(playerAge < 13)
         {
             cout << "Sorry, this game is too grown up for you.\n\n";
+            return 0;
         }
         else
         {
