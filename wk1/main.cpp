@@ -49,13 +49,20 @@ int main() {
         {
             cout << "What is your name, player?\n";
             cin >> playerName;
-            if(playerName.length() > 6)
+            if(playerName == "Goobert")
             {
-                cout << "Wow! That's a long name, " << playerName << "!\n";
+                cout << "You... you just said it's not Goobert? Why would you... nevermind. Welcome, Goobert.\n";
             }
-            else
+            else 
             {
-                cout << "Nice! Easy name. Welcome, " << playerName << "!\n";
+                if(playerName.length() > 6)
+                {
+                    cout << "Wow! That's a long name, " << playerName << "!\n";
+                }
+                else
+                {
+                    cout << "Nice! Easy name. Welcome, " << playerName << "!\n";
+                }
             }
         }
         
@@ -66,7 +73,7 @@ int main() {
     bool godMode = false;
     if(playerAge == 19 && playerName == "George")
     {
-        cout << "Hello, developer. God mode enabled.\n";
+        cout << "\n*Hello, developer. Debug mode enabled.*\n\n";
         godMode = true;
     }
 
