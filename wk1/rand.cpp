@@ -45,7 +45,7 @@ int main()
             if(theNumber == guess)
             {
                 cout << "You guessed it!\n";
-                return 0;
+                
             }
             //too high
             else if(guess > theNumber)
