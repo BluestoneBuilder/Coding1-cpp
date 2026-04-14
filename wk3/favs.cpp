@@ -43,14 +43,14 @@ int main()
             cout << "\nWhat game would you like to add to your favorites?\n";
             getline(cin, input);
             favs.push_back(input);
-            cout << "\nAdded '" << input << "'\n";
+            cout << "\nAdded '" << input << "'.\n";
         }
         else if(input == "show")
         {
             sort(favs.begin(), favs.end());
             if(favs.size() == 0)
             {
-                cout << "\nYou don't have any favorites right now. Consider using the 'add' function\n";
+                cout << "\nYou don't have any favorites right now. Consider using the 'add' function.\n";
             }
             else
             {
@@ -82,7 +82,7 @@ int main()
                 }
                 else
                 {
-                    cout << "\nI couldn't find that game in your favorites\n";
+                    cout << "\nI couldn't find that game in your favorites.\n";
                 }
             }
         }
@@ -105,7 +105,7 @@ int main()
                 }
                 else
                 {
-                    cout << "\nI couldn't find that game in your favorites\n";
+                    cout << "\nI couldn't find that game in your favorites.\n";
                 }
             }
         }
