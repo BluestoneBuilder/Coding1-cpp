@@ -62,7 +62,21 @@ int main()
         }
         else if(input == "edit")
         {
-
+            cout << "Which of your favorites would you like to edit?\n";
+            getline(cin, input);
+            vector<string>::iterator favToEdit = favs.begin();
+            favToEdit = find(favs.begin(), favs.end(), input);
+            if(favToEdit != favs.end())
+            {
+                cout << "What would you like to change '" << *favToEdit << "' to?\n";\
+                getline(cin, input);
+                cout << "'" << *favToEdit << "' has been changed to '" << input << "'.\n";
+                *favToEdit = input;
+            }
+            else
+            {
+                cout << "I couldn't find that game in your favorites\n";
+            }
         }
         else if(input == "remove")
         {
@@ -72,8 +86,8 @@ int main()
             favToRemove = find(favs.begin(), favs.end(), input);
             if(favToRemove != favs.end())
             {
-                favs.erase(favToRemove);
                 cout << "Removed '" << *favToRemove << "'.\n";
+                favs.erase(favToRemove);
             }
             else
             {
