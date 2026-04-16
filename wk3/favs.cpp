@@ -3,6 +3,7 @@
 //g++ favs.cpp -o favs && ./favs
 //ctrl+C to quit loop
 
+#include <cstddef>
 #include<iostream>
 #include<string>
 #include<vector>
@@ -41,8 +42,18 @@ int main()
         else if(input == "add")
         {
             cout << "\nWhat game would you like to add to your favorites?\n";
+            cout << "Add multiple items by sepparating with a comma.\n";
             getline(cin, input);
-            favs.push_back(input);
+            int previousPos = 0;
+            size_t pos;
+            string sepparatedItem;
+            while ((pos = input.find(", ", previousPos)) != string::npos)
+            {
+                sepparatedItem = input.substr(previousPos, pos - previousPos);
+                favs.push_back(sepparatedItem);
+                previousPos = pos + 2;
+            }
+            favs.push_back(input.substr(previousPos));
             cout << "\nAdded '" << input << "'.\n";
         }
         else if(input == "show")
