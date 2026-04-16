@@ -114,4 +114,5 @@ int main()
             cout << "\nUnrecognized input.\n";
         }
     }
+    return 0;
 }
