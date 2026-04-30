@@ -86,9 +86,13 @@ int main()
     cout << "Creating our glob of slimes...\n\n";
     vector<baseSlime> glob(6);
 
-    for(int i = 0; i < glob.size(); i++)
+    // for(int i = 0; i < glob.size(); i++)
+    // {
+    //     glob[i].hello();
+    // }
+    for(baseSlime slime : glob)
     {
-        glob[i].hello();
+        slime.hello();
     }
 
     cout << "Let's have Ricky and Beth fight!\n";
