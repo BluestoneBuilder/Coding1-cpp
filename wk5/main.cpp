@@ -124,6 +124,10 @@ public:
     {
         return boredom;
     }
+    void changeChargeBy(int amount)
+    {
+        charge += amount;
+    }
 };  //Don't forget the semicolon
 
 int main()
@@ -148,8 +152,8 @@ int main()
     cout << "Transfering power...\n\n";
     while(threepio.getCharge() < 15)
     {
-        artoo.setCharge(artoo.getCharge() - 1);
-        threepio.setCharge(threepio.getCharge() + 1);
+        artoo.changeChargeBy(-1);
+        threepio.changeChargeBy(1);
     }
 
     cout << threepio.getName() << "'s charge is now " << threepio.getCharge() << ".\n";
