@@ -11,7 +11,7 @@
 using namespace std;
 
 //global vector of names any function can use
-vector<string> slimeNames = {"Tombow", "Cheryl", "Escobar", "Inigo", "Franz"};
+vector<string> slimeNames = {"Tombow", "Cheryl", "Escobar", "Inigo", "Franz", "Bartholomew", "Stephen", "Jonathan", "Joseph", "Harold", "Charles", "Harlow", "Desmond", "Melanie", "Adelynn", "Clementine", "Douglas", "Lindsay", "Raziel", "Giovanni", "Romulus", "Murdoch", "Devlyn", "Simeon", "Elijah", "Ezekiel", "Reuben", "Benjamin", "Zachariah", "Jebediah", "Abraham", "Adam", "James", "Paul", "Mathew", "Mark", "Luke", "Samson", "Samuel", "David", "Goliath", "Delilah", "Seth", "Isaiah", "Isaac", "Ishmael", "Noah", "Ceasar", "Nero", "Thomas", "Timothy", "Peter", "Judas", "Michael", "Gabriel", "Lot", "Cain", "Abel", "Balaam", "Moses", "Ramses", "Aaron", "Caleb", "Mary", "Ponelope", "Pontius", "Augustus", "Silas", "Esther", "Ruth", "Asher", "Chris P.", "Jacob", "Esau", "Laban", "Rachel", "Levi", "Hezekiah", "Mephibosheth", "Nicodemus", "Methuselah", "Jordan", "Saul", "Solomon", "Nehemiah", "Job", "Jeremiah", "Daniel", "Joel", "Jonah", "Micah", "Judah", "Nahum", "Habakkuk", "Malachi"};
 
 class baseSlime
 {
@@ -23,8 +23,16 @@ public:
     baseSlime()
     {
         name = slimeNames[rand() % slimeNames.size()] + " Slime";
-        health = rand() % 5 + 5;
-        damage = rand() % 6 + 3;
+        if(name == "Samson Slime")
+        {
+            damage = 15;
+            health = 15;
+        }
+        else
+        {
+            damage = rand() % 6 + 3;
+            health = rand() % 5 + 5;
+        }
     }
     baseSlime(string setName, int setHealth, int setDamage)
     {
