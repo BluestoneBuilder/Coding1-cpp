@@ -42,7 +42,7 @@ public:
     {
         opponent.health -= damage;
         cout << "Ooh! " << name;
-        switch (rand() % 4) 
+        switch (rand() % 5) 
         {
             case 0:
                 cout << " punches ";
@@ -55,6 +55,9 @@ public:
                 break;
             case 3:
                 cout << " blasts ";
+                break;
+            case 4:
+                cout << " says mean things about ";
                 break;
         }
         cout << opponent.name << " for " << damage << " damage!\n\n";
