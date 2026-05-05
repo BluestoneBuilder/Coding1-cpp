@@ -89,7 +89,7 @@ int main()
     baseSlime beth("Elizabeth Slime", 12, 5);
 
     baseSlime randomSlime;
-    
+
     ricky.hello();
     beth.hello();
     randomSlime.hello();
@@ -137,6 +137,29 @@ int main()
             }
         }
     }
+    cout << "\nNow let's have two random slimes fight!\n";
+    fighterA = glob[rand() % 6];
+    fighterB = glob[rand() % 6];
+    //To make sure slimes are different from one another
+    while(fighterB.name == fighterA.name)
+    {
+        fighterB = glob[rand() % 6];
+    }
+    cout << "Our contestants are " << fighterA.name << " and " << fighterB.name << "!\n\n";
 
+    while(fighterA.health > 0 && fighterB.health > 0)
+    {
+        if(fighterA.attack(fighterB))
+        {
+            cout << fighterB.name << " has been defeated!\n";
+        }
+        else
+        {
+            if(fighterB.attack(fighterA))
+            {
+                cout << fighterA.name << " is freaking dead!\n";
+            }
+        }
+    }
     return 0;
 }
