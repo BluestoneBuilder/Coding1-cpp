@@ -196,7 +196,7 @@ int main()
                         cout << "\nCongratulations! Your damage has been leveled up to " << playerPokemon.GetDamage();
                         if (healthGained > 0)
                         {
-                            cout << ", and your health has been leveled up to " << playerPokemon.GetCurrentHealth();
+                            cout << ", and your health has been leveled up to " << playerPokemon.GetMaximumHealth();
                         }
                         cout << "!\n";
                     }
