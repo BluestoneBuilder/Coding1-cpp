@@ -238,16 +238,32 @@ int main()
         {
             cout << "\nTime to battle! ";
             Pokemon& opponent = opponents[rand() % opponents.size()];
+            bool atLeastOneAlive = false;
             while(true)
             {
-                cout << "Your opponent is " << opponent.GetName() << "!\n";
-                if(opponent.GetDeathStatus())
+                for(Pokemon& potentialOpponent : opponents)
                 {
-                    cout << "\nOh... Nevermind. That one is dead. We'll... uh... get you a new opponent.\n";
-                    opponent = opponents[rand() % opponents.size()];
+                    if(!potentialOpponent.GetDeathStatus())
+                        atLeastOneAlive = true;
                 }
-                else
+                if(atLeastOneAlive)
                 {
+                    cout << "Your opponent is " << opponent.GetName() << "!\n";
+                    if(opponent.GetDeathStatus())
+                    {
+                        cout << "\nOh... Nevermind. That one is dead. We'll... uh... get you a new opponent.\n";
+                        opponent = opponents[rand() % opponents.size()];
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+                else 
+                {
+                    cout << "\nWell, it looks like you've defeated every enemy I have for you. Congratulations. There isn't much left for you now. You'll just have to fight yourself.\n";
+                    opponent = playerPokemon;
+                    cout << "Your opponent is " << opponent.GetName() << "!\n";
                     break;
                 }
             }
@@ -331,6 +347,7 @@ int main()
                 }
             }
             playerPokemon.IncrementHunger(5);
+            atLeastOneAlive = false;
         }
         else if(input == "rename")
         {
@@ -385,6 +402,12 @@ int main()
                     cout << "\nUnknown command.\n";
                 }
             }
+        }
+        else if(input == "lvlMax")
+        {
+            playerPokemon.LevelHealth(100);
+            playerPokemon.LevelDamage(100);
+            cout << "\nAdded 100 levels to both stats\n";
         }
         else if(input == "quit" || input == "quit game")
         {
