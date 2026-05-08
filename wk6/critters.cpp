@@ -45,6 +45,13 @@ public:
         damage = rand() % 5 + 5;
         hunger = rand() % 3;
         isDead = false;
+        if(rand() % 100 > 98)
+        {
+            name = "Mega " + name;
+            maxHealth += 100;
+            damage += 100;
+            currentHealth = maxHealth;
+        }
     }
     void Hello()
     {
