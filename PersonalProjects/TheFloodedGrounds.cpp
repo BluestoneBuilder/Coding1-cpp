@@ -1,5 +1,6 @@
 //A text adventure horror game I decided to make
-//g++ TheFloodedGrounds.cpp -o TheFloodedGrounds && ./TheFloodedGrounds
+//Mac: g++ TheFloodedGrounds.cpp -o TheFloodedGrounds && ./TheFloodedGrounds
+//Windows: cl /EHsc TheFloodedGrounds.cpp && TheFloodedGrounds
 
 #include <iostream>
 #include <ctime>
