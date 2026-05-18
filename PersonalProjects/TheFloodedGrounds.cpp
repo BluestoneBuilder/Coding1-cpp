@@ -308,7 +308,7 @@ int main()
         {
             if(hasTools)
             {
-                displayNextStanza("You ready yourself and proceed to the main corridor. A strange sound similar to the metal creaking echoes in the direction you're going");
+                displayNextStanza("You ready yourself and proceed to the main corridor. A strange sound similar to the metal creaking echoes in the direction you're going.");
                 break;
             }
             else
