@@ -3,7 +3,6 @@
 //Windows: cl /EHsc TheFloodedGrounds.cpp && TheFloodedGrounds
 
 #include <iostream>
-#include <ctime>
 #include <string>
 using namespace std;
 
@@ -37,7 +36,6 @@ string displayInteractiveStanza(string text, string inputPrompt)
 }
 int main()
 {
-    srand(time(0));
     string player;
     string input;
     //Player greeting
